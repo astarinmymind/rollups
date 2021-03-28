@@ -1,1 +1,1 @@
-this is my personal notebook where I take notes on everything happening in the rollup universe
+this is my personal notebook where i take notes on everything happening in the rollup universe
