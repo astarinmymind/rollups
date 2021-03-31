@@ -5,6 +5,8 @@ jan 2021
 
 [an incomplete guide to rollups](https://vitalik.ca/general/2021/01/05/rollup.html) by vitalik buterin
 
+[an approximate introduction to how zk-snarks are possible](https://vitalik.ca/general/2021/01/26/snarks.html) by vitalik buterin
+
 nov 2020
 *[zkSync Rollup Protocol](https://github.com/matter-labs/zksync/blob/master/docs/protocol.md) by zkSync
 
