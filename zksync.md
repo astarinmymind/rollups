@@ -35,3 +35,48 @@
 - signature scheme: musig 
 - assumptions: collision-resistance, pseudo-randdomness, discrete log problem on elliptic curves & finite fields 
 
+## payments
+- operations: 
+    - priority (interacts with mainnet)
+        - deposit: move funds from mainnet to zksync 
+        - fullexit: withdraw from zksync to mainnet without cooperation of zksync server
+    - transaction (submitted via zksync operators)
+        - changepubkey: sets/changes signing key of account 
+        - transfer: transfer funds between zksync accounts 
+        - withdraw: withdraw funds from zksync to mainnet
+        - forcedexit: withdraw funds from account with no signing key to ethereum
+- blocks: 
+    - all operations are inside blocks pushed by zksync operators
+    - commit: push block to zksync smart contract on mainnet
+    - verify: publish proof for block 
+    - note: multiple blocks can be committed without being verified 
+        - user does not have to wait for block commitment/verification
+- flow: 
+    - accounts are created by: 
+        1. receives deposit from ethereum
+        2. transfer of funds 
+        note: accounts must set signing key to authorize transactions
+    - set signing key 
+        - default is 0 ("unowned")
+        - call changepubkey with zksync signature of transaction data + ethereum signature of account ownership
+    - sending transactions
+        - priority
+        - normal
+            - encode transaction data in bytes
+            - create zksync signature with private key
+            - generate eth sig or eip1271 sig
+            - send transaction
+        - batch
+## smart contracts
+- turing complete: unbounded loops, recursion, vectors, maps of arbitrary length
+- inherits ethereum: local var stored in stack/heap, contract storage is global 
+    - contracts can call other contracts via interfaces
+- sync vm: 
+    - execution trace proven in snarks 
+    - uses one singl circuit 
+- zinc: 
+    - secure + safe is number 1 priority 
+    - based off rust 
+    - smart contract language optimized for zkp circuits 
+    - uses llvm middle/backend
+    
