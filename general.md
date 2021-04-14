@@ -11,6 +11,7 @@
 ![batch](https://vitalik.ca/images/rollup-files/diag2.png)
 
 note: depositing and withdrawing is done by transferring and withdrawing assets from the rollup contract
+
 3. ensure post-state root is correct (2 flavors: optimistic and zk rollup)
 ## roadmap
 > the ethereum ecosystem is likely to be all-in on rollups (plus some plasma and channels) as a scaling strategy for the near and mid-term future. eth2’s long-term future is a single high-security execution shard that everyone processes, plus a scalable data availability layer.
