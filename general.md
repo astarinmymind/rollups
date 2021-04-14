@@ -1,6 +1,6 @@
 ## snapshot
 > Rollups move computation (and state storage) off-chain, but keep some data per transaction on-chain.
-- designed to be **general purpose** (eg can run an EVM inside it, allowing all existing layer 1 applications to *migrate*without the need to write new code)
+- designed to be **general purpose** (eg can run an EVM inside it, allowing all existing layer 1 applications to *migrate* without the need to write new code)
 - transactions are verified in batches rather than one by one ("rolled up")
 
 ## meat
