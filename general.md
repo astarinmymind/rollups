@@ -6,8 +6,10 @@
 ## meat
 1. on-chain rollup smart contract keeps track of state via a **state root** (a hash of account balances, contract code, etc)
 ![state root](https://vitalik.ca/images/rollup-files/diag1.png)
+
 2. the state root updates when anyone publishes a batch
 ![batch](https://vitalik.ca/images/rollup-files/diag2.png)
+
 note: depositing and withdrawing is done by transferring and withdrawing assets from the rollup contract
 3. ensure post-state root is correct (2 flavors: optimistic and zk rollup)
 ## roadmap
