@@ -13,7 +13,7 @@
 &nbsp;
 ### zk rollups offer further compression
 - some parts of a transaction is only used for verification:
-    - this must be on-chain for optimistic rolluup for it to be checked in a fraud proof
+    - this must be on-chain for optimistic rollup for it to be checked in a fraud proof
     - this can be off-chain for zkrollup as the snark proves all data needed for verification was provided 
 
 - privacy-preserving rollups:
